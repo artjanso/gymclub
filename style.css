@@ -1,0 +1,331 @@
+/*General rules*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /*HTML specific rules*/
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    font-size: 18px;
+    background-color: rgb(223, 219, 219);
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-weight: normal;
+    font-size: 1rem;
+  }
+
+/*Header -------------------------------------------------------------------*/
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
+  padding: 0 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: 3rem;
+  border-bottom: 1px solid beige;
+}
+
+.navbar .menu {
+  display: none;
+}
+
+.header-container #logo {
+  font-weight: bold;
+  font-size: 2rem;
+  color: black;
+  -webkit-text-stroke: 0.5px whitesmoke;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  border-right: 1px solid black;
+  padding: 0.4rem 1rem;
+  margin-left: 0.5rem;
+}
+
+/*Drop down button config*/
+.dropbtn { 
+  border-right: 1px solid black;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: inherit;
+  
+  margin-left: 0.5rem;
+  padding: 0.4rem 1rem;
+
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*Drop down box config*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: none;
+  z-index: 1;
+}
+
+/*Displaying drop down box*/
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*Drop down box content config*/
+.dropdown-content a {
+  float: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  border-right: none;
+  border-bottom: 1px solid black;
+  width: 8.5rem;
+  background-color: rgb(223, 219, 219);
+}
+
+.navbar #contact {
+  border-right: none;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  font-weight: bold;
+}
+
+.dropdown-content a:hover {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 810px) {
+  .navbar a {
+    display: none;
+  }
+
+  .dropbtn {
+    display: none;
+  }
+
+  .navbar .menu {
+    display: inline-block;
+    width: 0.01rem;
+    margin-right: 2rem;
+  }
+  
+  .navbar .menu img {
+    width: 2rem;
+  }
+
+  @media only screen and (max-width: 400px) {
+    .navbar .menu {
+      display: none;
+    } 
+
+    .header-container #logo{
+      font-size: 1.25rem;
+    }
+  }
+}
+
+
+
+/*mission -------------------------------------------------------------------*/
+.mission-container {
+  background-image: url("resources/missionBG.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+  border-radius: 1.5rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  margin: 0 1.5rem;
+  min-height: 400px;
+  font-size: 1.6rem;
+  color: white;
+
+  border: 1px solid black;
+}
+
+.mission-container h1  {
+  padding-bottom: 1rem;
+  background-color: black;
+  text-align: center;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.mission-container p {
+  background-color: black;
+  text-align: center;
+  width: 100%;
+  opacity: 0.7;
+}
+
+/*Offers -------------------------------------------------------------------*/
+.cases {
+  display: flex;
+  margin: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.case {
+  border: 1px solid black;
+  display: flex;
+  align-items: flex-end;
+
+  width: 300px;
+  height: 300px;
+  margin: 0.07rem;
+  border-radius: 1.5rem;
+}
+
+.case:hover  {
+  border: 2px solid whitesmoke;
+}
+
+.description {
+  background-color: black;
+  opacity: 0.85;
+  color: white;
+  width: 100%;
+  margin: 0;
+  padding: 0.8rem 1.7rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+#bangkok {
+  flex-grow: 1;
+  background-image: url("resources/Bangkok.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#krabi {
+  flex-grow: 2;
+  background-image: url("resources/krabi.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#phuket {
+  flex-grow: 2;
+  background-image: url("resources/phuketjpg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#koyaonai {
+  flex-grow: 1;
+  background-image: url("resources/KoYaoNoijpg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.offers h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+} 
+
+/*Team -------------------------------------------------------------------*/
+.team h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.teamcont {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;  
+}
+
+.team-container {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 300px;
+  height: 400px;
+  margin: 1rem;
+  border-radius: 1.5rem;
+}
+
+.team-container h2, .team-container p {
+  background-color: black;
+  color: white;
+  opacity: 0.85;
+  padding-left: 1rem;
+  width: 100%;
+  border-radius: 0 0 1.5rem 1.5rem;
+} 
+
+#martin {
+  background-image: url("resources/Martin.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#boris {
+  background-image: url("resources/Boris.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+
+#michelle {
+  background-image: url("resources/Michelle.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/*Contact Details -------------------------------------------------------------------*/
+.contactdetails p {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.contactdetails  {
+  padding-bottom: 1rem;
+}
+
+/*Footer -------------------------------------------------------------------*/
+footer {          
+  padding: 12px 30px;
+  border-top: 2px solid #282B37;
+  background-color: rgb(19, 19, 19);
+}
+
+footer p,
+footer a {
+  font-size: 0.75rem;
+  text-align: center;
+  color: #797A7F; 
+}
