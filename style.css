@@ -8,23 +8,68 @@
   /*HTML specific rules*/
 html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
-    font-size: 18px;
+    font-size: 16px;
     background-color: white;
     background: linear-gradient(to right, white, whitesmoke);
+    max-width: 80rem;
+    margin: auto;
+    scroll-behavior: smooth;
   }
 
   h1 {
     font-size: 3rem;
   }
 
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
   h3 {
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 2rem;
+
+    background-color: black;
+    opacity: 0.85;
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0.8rem 1.7rem;
+    border-radius: 0 0 1.5rem 1.5rem;
   }
 
   p {
     font-size: 1.5rem;
   }
+
+  #menu {
+    display: none;
+  }
+
+  /*Adjust decoration for anchor tags*/
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: gray;
+  transition: color 0.15s ease-in;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+
 
 /*Header -------------------------------------------------------------------*/
 .header-container {
@@ -41,10 +86,6 @@ html {
   border-bottom: 1px solid rgb(202, 202, 181);
 }
 
-.navbar .menu {
-  display: none;
-}
-
 .header-container img {
   width: 4.5rem;
   height: 3rem;
@@ -56,7 +97,6 @@ html {
 }
 
 .navbar a {
-  
   text-align: center;
   border-right: 1px solid black;
   padding: 0.4rem 1rem;
@@ -64,7 +104,7 @@ html {
 }
 
 
-.navbar #join {
+.navbar #joinus {
   border-right: none;
 }
 
@@ -73,35 +113,11 @@ html {
 }
 
 
-@media only screen and (max-width: 810px) {
-  .navbar a {
-    display: none;
-  }
 
-  .dropbtn {
-    display: none;
-  }
-
-  .navbar .menu {
-    display: inline-block;
-    width: 0.01rem;
-    margin-right: 2rem;
-  }
-  
-  .navbar .menu img {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  @media only screen and (max-width: 400px) {
-    .navbar .menu {
-      display: none;
-    } 
-
-    .header-container #logo{
-      font-size: 1.25rem;
-    }
-  }
+@media screen and (max-width: 720px) { 
+  .navbar  {
+   display: none;
+ } 
 }
 
 
